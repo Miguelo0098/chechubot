@@ -11,7 +11,7 @@ async def on_ready():
 
 @bot.command(pass_context=True)
 async def hola(ctx):
-	await bot.say('@{} Saludos, individuo humanoide.'.format(str(ctx.message.author)))
+	await bot.say('{} Saludos, entidad corpórea :vulcan:'.format(str(ctx.message.author.mention)))
 
 @bot.command(pass_context=True)
 async def ping(ctx):
