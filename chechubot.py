@@ -1,5 +1,6 @@
 import discord
 import nacl
+import asyncio
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='<', description='ChechuBot: your friendly bot for personal fun!')
@@ -35,6 +36,9 @@ async def habla(ctx):
 	vc = await bot.join_voice_channel(channel)
 	player = vc.create_ffmpeg_player('voices/joder.mp3')
 	player.start()
+	while True:
+		if player.is_done() == True:
+			break
 	await vc.disconnect()
 
 bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
