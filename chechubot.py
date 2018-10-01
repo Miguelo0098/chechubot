@@ -32,5 +32,6 @@ async def habla(ctx):
 	author=ctx.message.author
 	channel=author.voice_channel
 	await bot.join_voice_channel(channel)
+	await bot.disconnect(channel)
 
 bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
