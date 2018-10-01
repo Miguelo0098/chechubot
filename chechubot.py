@@ -1,7 +1,7 @@
 import discord
 import nacl
 import asyncio
-from chechusounds.py import pick_random_voice
+import chechusounds
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='<', description='ChechuBot: your friendly bot for personal fun!')
