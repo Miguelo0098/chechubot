@@ -1,7 +1,7 @@
 import discord
 import nacl
 import asyncio
-import chechusounds
+from chechusounds import pick_random_voice
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='<', description='ChechuBot: your friendly bot for personal fun!')
@@ -36,6 +36,7 @@ async def habla(ctx):
 	channel=author.voice_channel
 	vc = await bot.join_voice_channel(channel)
 	sound = pick_random_voice()
+	print(sound)
 	player = vc.create_ffmpeg_player(sound)
 	player.start()
 	while True:
