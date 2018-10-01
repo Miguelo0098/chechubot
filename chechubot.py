@@ -1,7 +1,8 @@
 import discord
+import nacl
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='<', description='bot stuff')
+bot = commands.Bot(command_prefix='<', description='ChechuBot: your friendly bot for personal fun!')
 
 @bot.event
 async def on_ready():
@@ -31,8 +32,7 @@ async def moja(ctx):
 async def habla(ctx):
 	author=ctx.message.author
 	channel=author.voice_channel
-	await bot.join_voice_channel(channel)
-	vc=await
-	await vc.disconnect(channel)
+	vc = await bot.join_voice_channel(channel)
+	await vc.disconnect()
 
 bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
