@@ -27,4 +27,10 @@ async def role(ctx):
 async def moja(ctx):
 	await bot.say('moja')
 
+@bot.command(pass_context=True)
+async def habla(ctx):
+	await bot.join_voice_channel(ctx.author.channel)
+	await bot.disconnect(ctx.author.channel)
+	pass
+
 bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
