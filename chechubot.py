@@ -29,8 +29,8 @@ async def moja(ctx):
 
 @bot.command(pass_context=True)
 async def habla(ctx):
-	await bot.join_voice_channel(ctx.message.author.voice_channel)
-	await bot.disconnect(ctx.message.author.voice_channel)
-	pass
+	author=ctx.message.author
+	channel=author.voice_channel
+	await bot.join_voice_channel(channel)
 
 bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
