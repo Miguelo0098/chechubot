@@ -44,4 +44,4 @@ async def habla(ctx):
 			break
 	await vc.disconnect()
 
-bot.run('MzYyOTQ1NDE0MzIxNjY4MDk2.DYAFIQ._wULz77Vrzu1kxdmA47SwaWK58k')
+bot.run('YOUR_TOKEN_HERE')

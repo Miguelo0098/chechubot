@@ -22,4 +22,4 @@ async def blyat(ctx):
 			break
 	await vc.disconnect()
 
-bot.run('NDk2NDI0NDU3OTA5MzA1MzU2.DpQbQw.WNyT2mFhDjGiMpflfFDquwP3xVA')
+bot.run('YOUR_TOKEN_HERE')
