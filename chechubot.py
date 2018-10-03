@@ -17,7 +17,7 @@ async def hola(ctx):
 
 @bot.command(pass_context=True)
 async def ping(ctx):
-	await bot.say('@{} Pong.'.format(str(ctx.message.author)))
+	await bot.say('{} Pong.'.format(str(ctx.message.author.mention)))
 
 @bot.group(pass_context=True)
 async def role(ctx):
