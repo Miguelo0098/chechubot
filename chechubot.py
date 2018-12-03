@@ -44,4 +44,6 @@ async def habla(ctx):
 			break
 	await vc.disconnect()
 
-bot.run('YOUR_TOKEN_HERE')
+file = open('token_chechu.txt', 'r')
+token = file.read(59);
+bot.run(token)
