@@ -13,14 +13,17 @@ async def on_ready():
 
 @bot.command(pass_context=True)
 async def hola(ctx):
+	"""-> Chechu te saluda"""
 	await bot.say('{} Saludos, entidad corpórea :vulcan:'.format(str(ctx.message.author.mention)))
 
 @bot.command(pass_context=True)
 async def ping(ctx):
-	await bot.say('@{} Pong.'.format(str(ctx.message.author)))
+	"""-> Chechu juega al ping-pong contigo"""
+	await bot.say('{} Pong.'.format(str(ctx.message.author.mention)))
 
 @bot.group(pass_context=True)
 async def role(ctx):
+	"""-> Chechu hace cosas con roles"""
 	if ctx.invoked_subcommand is None:
 		await bot.say('Dame argumentos, coño.')
 		await bot.say('`create -- > crea un rol.\ndelete -- > elimina un rol`')
@@ -28,10 +31,12 @@ async def role(ctx):
 
 @bot.command(pass_context=True)
 async def moja(ctx):
+	"""-> Chechu dice 'moja'"""
 	await bot.say('moja')
 
 @bot.command(pass_context=True)
 async def habla(ctx):
+	"""-> Chechu dice una frase random en un canal de voz"""
 	author=ctx.message.author
 	channel=author.voice_channel
 	vc = await bot.join_voice_channel(channel)
